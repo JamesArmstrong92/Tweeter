@@ -1,0 +1,21 @@
+/*
+Navagation bar
+*/
+
+nav span {
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  font-family: 'Bungee', cursive;
+  height: 120px;
+  background-color: #4056A1;
+  color: white;
+  padding-left: 50px;
+  font-size: xx-large;
+  width: 100%; 
+  position: fixed;
+  top: 0;
+  
+};

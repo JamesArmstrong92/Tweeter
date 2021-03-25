@@ -4,26 +4,63 @@
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
 
+    <!-- Disable viewport zooming-->
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
 
+      <!-- Google Fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet">
+
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/new-tweets.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/responsive.css" type="text/css" />
+    
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
   </head>
 
   <body>
     <!-- Top nav bar (fixed) -->
     <nav>
-      <span>tweeter</span>
+      <span>Tweeter</span>
     </nav>
 
+    <header class="main-head">
+      <div>
+          <img src="/images/profile-hex.png" class='profile'> 
+      </div>
+      <br>
+      <div>
+          <h2>James</h2>
+      </div>
+  </header>
+
     <!-- Page-specific (main) content here -->
-    <main class="container"></main>
+    <main class="container">
+      <section class="new-tweet">
+        <h2>Compose Tweet</h2>
+        <form method="POST" action="/tweets">
+          <h5 class="error"></h5>
+          <label for="tweet-text" class="tweet-header">What are you humming about?</label>
+          <textarea name="text" id="tweet-text" class="tweet-text"></textarea>
+          <div class="button-container">
+            <button type="submit">Tweet</button>
+            <output class="counter">140</output>
+          </div>
+        </form>
+      </section>
+      <div class='tweets' id="tweets"></div>
+    </main>
   </body>
 </html>

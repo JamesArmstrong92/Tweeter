@@ -1,0 +1,125 @@
+/*
+This styling sheet is everything to do with generating a new tweet and the textbox/submit button
+*/
+form {
+
+  display: flex;
+  flex-direction: column;
+  
+}
+
+form button {
+
+  display: flex;
+  justify-content: flex-start;
+  background-color: blue;
+  color: white;
+  margin-right: auto;
+  font-family: 'Bungee', cursive;
+
+}
+
+label.tweet-header {
+
+  border-bottom: solid;
+
+}
+
+.user-info {
+
+    display: flex;
+    flex-direction: row;
+
+}
+
+div.tweet-date {
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+
+div.button-container {
+
+  display: flex;
+  flex-direction: row;
+
+}
+
+textarea#tweet-text {
+
+  margin-top: 10px;
+
+}
+
+section.new-tweet {
+
+  width: 90%;
+
+}
+
+p.tweet-content {
+
+  border-bottom: solid;
+  margin-right: 24px;
+
+}
+
+.below140 {
+
+  color: red;
+
+}
+
+article {
+
+  margin-top: 2em;
+  margin-bottom: 2em;
+  border-style: solid;
+
+}
+
+header.head {
+
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+width: 90%;
+margin: 1em;
+
+}
+
+article footer {
+
+display: flex;
+justify-content: space-between;
+border-top-style: solid;
+margin: 0.5em;
+
+}
+
+article p {
+
+margin-left: 1em;
+
+}
+
+article:hover {
+
+text-shadow: 1px 1px 1px darkgrey;
+box-shadow: 8px 8px 8px darkgrey;
+
+}
+
+h5.error {
+  
+  display: flex;
+  align-items: center;
+  color: red;
+  border: red;
+  border-style: dotted;
+  border-width: 0;
+
+}
+

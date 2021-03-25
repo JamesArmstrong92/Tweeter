@@ -1,0 +1,42 @@
+/*
+CSS for all viewtypes
+*/
+
+@media only screen and (min-width: 1024px) {
+
+  body > form {
+    
+    width: 50%;
+    margin-top: 7em;
+    margin-left: 2em;
+    margin-right: 2em;
+
+  }
+
+  header.head {
+
+  display: flex;
+  justify-content: space-between;
+
+  }
+
+  body {
+
+  display: flex;
+  flex-direction: row;
+
+  }
+
+  header.main-head {
+
+    width: 50%;
+    margin-top: 200px;
+
+  }
+
+  main.container {
+
+  width: 50%;
+  
+  }
+}
