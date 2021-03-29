@@ -5,10 +5,16 @@
  * Please disregard linting on lines 10, 42, 64, 80. They are a result of Prettier extension
  */
 
+//Dependency attempting to fetch correct time for line 33
+
+// const moment = require('moment'); // require
+// moment().format();
+
 //Creating the element that will be appeded to the webpage
 
 // eslint-disable-next-line func-style
 function createTweetElement(tweet) {
+  
   //Creating tweet varible to store tweet
   let $tweet = $("<article>");
   //Creating HTML template
@@ -25,7 +31,7 @@ function createTweetElement(tweet) {
   <p class="tweet-content">${tweet.content.text}</p>
   </div>
   <div class="tweet-date">
-  <p>${tweet.created_at}</p>
+  <p>${new Date(tweet.created_at).toLocaleDateString()}</p>
   <p>🇨🇦♺❤️</p>
   </div>
   `;
@@ -35,7 +41,7 @@ function createTweetElement(tweet) {
   console.log($tweet);
   return $tweet;
 
-};
+}
 
 //Error message function
 
@@ -93,6 +99,8 @@ function loadTweets() {
 //Making sure DOM is ready
 $(document).ready(() => {
 
+  
+
   $('form').on('submit', (event) => {
     //Preventing page reload
     event.preventDefault();
@@ -121,6 +129,8 @@ $(document).ready(() => {
         console.log('Request complted');
       });
   });
+
+  loadTweets();
 });
 
 
